@@ -5,10 +5,12 @@ pipeline {
     environment {
       ORG               = 'jenkinsx'
       APP_NAME          = 'demo12'
+      /*
       GIT_CREDS         = credentials('jenkins-x-git')
-      CHARTMUSEUM_CREDS = credentials('jenkins-x-chartmuseum')
       GIT_USERNAME      = "$GIT_CREDS_USR"
       GIT_API_TOKEN     = "$GIT_CREDS_PSW"
+      */
+      CHARTMUSEUM_CREDS = credentials('jenkins-x-chartmuseum')
     }
     stages {
       stage('CI Build and push snapshot') {
